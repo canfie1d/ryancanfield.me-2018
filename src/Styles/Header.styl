@@ -1,21 +1,28 @@
+$headerHeight= rem(80);
+
 header {
   position: relative;
-  // background: $black;
   height: 100vh;
-  width: rem(60);
+  width: 0;
+  overflow: hidden;
+  
+  +min-screen($media-small) {
+    background: shade($primary, 50%);
+    width: $headerHeight;
+    padding: rem(20 10);
+  }
   
   h1 {
-    font-family: Helvetica;
-    font-size: 24px;
-    font-weight: 700;
-    padding-left: rem(20);
     position: absolute;
-    left: 0;
-    bottom: 0;
-    line-height: rem(60);
     right: 0;
+    bottom: rem(20);
+    left: 0;
     transform: rotate(-90deg);
+    displayFont();
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: $headerHeight;
     white-space nowrap;
-    // color: $white;
+    color: $white;
   }
 }

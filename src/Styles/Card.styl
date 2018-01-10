@@ -1,0 +1,94 @@
+$card-height= rem(250);
+$card-height--small= rem(200);
+
+.card__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.card__item {
+  flex: 1 1 auto;
+
+  +min-screen($media-large) {
+    flex: 0 1 calc(50% - 40px);
+
+    &:nth-of-type(odd) {
+      margin-right: 20px;
+    }
+
+    &:nth-of-type(even) {
+      margin-left: 20px;
+    }
+
+  }
+
+  &:not(:last-of-type) {
+    padding-bottom : rem(40);
+  }
+
+}
+
+.card__link {
+    display         : flex;
+    flex-wrap       : wrap;
+    border          : 1px solid shade($white, 3%);
+    background      : $white;
+    text-decoration : none;
+    transition      : box-shadow 300ms ease;
+    cursor          : alias;
+
+    &:hover {
+        box-shadow : 2px 2px 4px rgba($black, .2);
+    }
+
+    &:focus {
+        outline        : 1px solid $white;
+        outline-offset : 2px;
+    }
+
+}
+
+.card__row {
+    display   : flex;
+    flex-wrap : wrap;
+    flex      : 1 1 50%;
+}
+
+.card__column {
+    position : relative;
+    flex     : 1 1 100%;
+    height   : $card-height--small;
+    overflow : hidden;
+}
+
+.card__image {
+    width      : 100%;
+    min-height : 100%;
+}
+
+.card__title {
+  displayFontBold();
+  display     : block;
+  padding     : rem(10);
+  font-size   : rem(24);
+  color       : $primary;
+}
+
+.card__description {
+  bodyFont();
+  display    : block;
+  padding    : rem(10);
+  font-size  : rem(16);
+  color      : $primary;
+  line-height: 1.2;
+}
+
+.card__length {
+  bodyFont();
+  position    : absolute;
+  right       : rem(10);
+  bottom      : rem(10);
+  font-size   : rem(16);
+  color       : $primary;
+}

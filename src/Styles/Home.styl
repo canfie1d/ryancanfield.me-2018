@@ -3,18 +3,18 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  padding: rem(60);
+  padding: rem(20);
+  background: shade($primary, 50%);
 
-  h1 {
-    font-size: rem(60);
-    font-weight: 700;
+  +min-screen($media-small) {
+    padding: rem(60);
   }
+  
   h2 {
-    max-width: rem(575);
-    font-size: rem(60);
+    max-width: rem(259);
+    
+    +min-screen($media-small) {
+      max-width: rem(502);
+    }
   }
-}
-
-.content {
-  padding: rem(60);
 }
