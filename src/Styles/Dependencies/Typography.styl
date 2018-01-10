@@ -1,0 +1,32 @@
+h1 {
+  displayFontBold();
+  line-height: 1.2;
+  font-size: rem(28);
+  color: $white;
+  
+  +min-screen($media-small) {
+    font-size: rem(56);
+  }
+}
+
+h2 {
+  displayFont();
+  font-size: rem(24);
+  line-height: 1.2;
+  color: $white;
+  
+  +min-screen($media-small) {
+    font-size: rem(52);
+  }
+}
+
+.p {
+  bodyFont();
+  font-size: rem(18);
+  max-width: rem(820);
+  line-height: 1.5;
+  
+  &:not(:last-child) {
+    margin-bottom: rem(60);
+  }
+}
