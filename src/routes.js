@@ -5,7 +5,8 @@ import Header from './Components/Header';
 
 // PAGES
 import Home from './Containers/Home';
-import NotHome from './Routes/NotHome';
+import Concepts from './Routes/Concepts';
+import Contact from './Routes/Contact';
 import NotFound from './Components/NotFound';
 
 export default (
@@ -13,7 +14,8 @@ export default (
     <div className='l--leftColumn'>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path='/not-home' component={NotHome} />
+        <Route exact path='/concepts' component={Concepts} />
+        <Route exact path='/contact' component={Contact} />
         <Route component={NotFound} />
       </Switch>
     </div>
