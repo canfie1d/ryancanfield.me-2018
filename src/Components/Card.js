@@ -12,9 +12,11 @@ export default class Card extends React.Component {
             <span className='card__title'>
               {this.props.title}
             </span>
-            <p className='card__description'>
-              {this.props.description}
-            </p>
+            <div className='card__description-wrapper'>
+              <p className='card__description'>
+                {this.props.description}
+              </p>
+            </div>
             <span className='card__length'>
               {this.props.length}
             </span>

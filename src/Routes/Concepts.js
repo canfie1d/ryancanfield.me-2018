@@ -1,5 +1,7 @@
 import React from 'react';
 import Card from '../Components/Card';
+import Introduction from '../Components/Introduction';
+import Footer from '../Components/Footer';
 import { CARD_LINKS } from '../Services/Data';
 
 export default class Landing extends React.Component {
@@ -26,15 +28,13 @@ export default class Landing extends React.Component {
   
   render() {
     return (
-      <div className='page'>
-        <div className='introduction'>
-          <h1>My Writing.</h1>
-          <h2>Organized thoughts on front-end design &amp; development.</h2>
-        </div>
+      <main className='page'>
+        <Introduction title="My Writing." subtitle="Organized thoughts on front-end design &amp; development." />
         <div className='content'>
           {this.renderCardLinks()}
         </div>
-      </div>
+        <Footer />
+      </main>
     );
   }
 }
