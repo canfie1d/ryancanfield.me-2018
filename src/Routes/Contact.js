@@ -12,10 +12,10 @@ export default class Landing extends React.Component {
           <div className='contact-card'>
             <h3 className='h3'>Would you like to work together or simply chat about a project? Don't hesitate to contact me.</h3>
             <ul className='contact-card__list'>
-              <li className='contact-card__item'>
+              <li className='contact-card__item contact-card__item__email'>
                 <a className='a' href="mailto:ryancanfield@me.com?subject=Hello from ryancanfield.me" >
-                  <Icon color='primary' size='x-large' icon='email'/>
-                  <span className='visually-hidden'>Email</span>
+                  <Icon color='white' size='medium' icon='email' />
+                  Contact Me
                 </a>
               </li>
               <li className='contact-card__item'>
