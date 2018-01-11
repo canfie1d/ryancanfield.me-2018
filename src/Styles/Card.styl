@@ -32,14 +32,15 @@ $card-height--small= rem(200);
 .card__link {
     display: flex;
     flex-wrap: wrap;
+    box-shadow: 2px 2px 4px rgba($black, .2);
     border: 1px solid shade($white, 3%);
-    background: $white;
+    background: $off-white;
     text-decoration: none;
+    cursor: pointer;
+    cursor: url(./Assets/Images/pointer.png) 2 2, pointer;
     transition: transform 300ms ease-out,
                 box-shadow 300ms ease-out;
-    cursor: alias;
-    box-shadow: 2px 2px 4px rgba($black, .2);
-    
+
     &:hover {
       transform: scale(1.01);
       box-shadow: 4px 4px 6px rgba($black, .15);

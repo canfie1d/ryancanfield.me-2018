@@ -28,24 +28,24 @@
     text-decoration: none;
     display: inline-block;
     padding: rem(15);
-    color: white;
+    color: $off-white;
     border: 1px solid transparent;
     cursor: pointer;
     cursor: url(./Assets/Images/pointer.png) 2 2, pointer;
 
     &.nav__link--active {
-      border: 1px solid $white;
+      border: 1px solid $off-white;
       
       &:hover,
       &:focus {
-        border-color: shade($white, 50%);
+        border-color: shade($off-white, 50%);
       }
 
     }
 
     &:hover,
     &:focus {
-      outline: 1px solid $white;
+      outline: 1px solid $off-white;
       outline-offset: 2px;
     }
       
