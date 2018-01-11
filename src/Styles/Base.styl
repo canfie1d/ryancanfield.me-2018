@@ -1,5 +1,6 @@
 html {
   font-size: $rem-base;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -11,13 +12,15 @@ html,
 body {
   width: 100%;
   min-height: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
 * {
   box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
 
   &:before,
   &:after {
@@ -38,7 +41,7 @@ body {
 .visually-hidden {
   position: absolute !important;
   height: 1px;
-  width: 1px; 
+  width: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
