@@ -1,5 +1,6 @@
 .l {
   display: flex;
+  flex-direction: row-reverse;
   
   +min-screen($media-small) {
     overflow: hidden;
@@ -7,12 +8,9 @@
 
   .l--leftColumn {
     flex: 1 1 auto;
-
-    +min-screen($media-small) {
-      overflow-x: hidden;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-    }
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .l--rightColumn {
@@ -21,8 +19,16 @@
 }
 
 .content {
-  padding: rem(60);
+  padding: rem(60 20 180);
   min-height: 100vh;
+  
+  +min-screen($media-small) {
+    padding: rem(60 40 120);
+  }
+  
+  +min-screen($media-medium) {
+    padding: rem(60 60 120);
+  }
 }
 
 .content__split {
@@ -34,7 +40,7 @@
     flex: 1 1 100%;
   }
 
-  +min-screen($media-medium) {
+  +min-screen($media-large) {
     flex-wrap: nowrap;
     .content__split__column {
       flex: 1 1 50%;
@@ -47,5 +53,4 @@
       }
     }
   }
-
 }

@@ -24,71 +24,74 @@ $card-height--small= rem(200);
   }
 
   &:not(:last-of-type) {
-    padding-bottom : rem(40);
+    padding-bottom: rem(40);
   }
 
 }
 
 .card__link {
-    display         : flex;
-    flex-wrap       : wrap;
-    border          : 1px solid shade($white, 3%);
-    background      : $white;
-    text-decoration : none;
-    transition      : box-shadow 300ms ease;
-    cursor          : alias;
-
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid shade($white, 3%);
+    background: $white;
+    text-decoration: none;
+    transition: transform 300ms ease-out,
+                box-shadow 300ms ease-out;
+    cursor: alias;
+    box-shadow: 2px 2px 4px rgba($black, .2);
+    
     &:hover {
-        box-shadow : 2px 2px 4px rgba($black, .2);
+      transform: scale(1.01);
+      box-shadow: 4px 4px 6px rgba($black, .15);
     }
-
+    
     &:focus {
-        outline        : 1px solid $white;
-        outline-offset : 2px;
+      outline: 1px solid $primary;
     }
 
 }
 
 .card__row {
-    display   : flex;
-    flex-wrap : wrap;
-    flex      : 1 1 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 50%;
 }
 
 .card__column {
-    position : relative;
-    flex     : 1 1 100%;
-    height   : $card-height--small;
-    overflow : hidden;
+    position: relative;
+    flex: 1 1 100%;
+    height: $card-height--small;
+    overflow: hidden;
 }
 
 .card__image {
-    width      : 100%;
-    min-height : 100%;
+    width: 100%;
+    min-height: 100%;
 }
 
 .card__title {
   displayFontBold();
-  display     : block;
-  padding     : rem(10);
-  font-size   : rem(24);
-  color       : $primary;
+  display: block;
+  padding: rem(10);
+  font-size: rem(24);
+  color: $primary;
+}
+
+.card__description-wrapper {
+  padding: rem(10);
 }
 
 .card__description {
+  lineClamp(3);
   bodyFont();
-  display    : block;
-  padding    : rem(10);
-  font-size  : rem(16);
-  color      : $primary;
-  line-height: 1.2;
+  font-size: rem(16);
 }
 
 .card__length {
   bodyFont();
-  position    : absolute;
-  right       : rem(10);
-  bottom      : rem(10);
-  font-size   : rem(16);
-  color       : $primary;
+  position: absolute;
+  right: rem(10);
+  bottom: rem(10);
+  font-size: rem(16);
+  color: $primary;
 }

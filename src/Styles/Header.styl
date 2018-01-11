@@ -2,27 +2,30 @@ $headerHeight= rem(80);
 
 header {
   position: relative;
-  height: 100vh;
   width: 0;
-  overflow: hidden;
   
   +min-screen($media-small) {
-    background: shade($primary, 50%);
+    background: $primary-dark;
     width: $headerHeight;
+    height: 100vh;
     padding: rem(20 10);
   }
   
-  h1 {
+  .h1 {
+    display: none;
     position: absolute;
     right: 0;
     bottom: rem(20);
     left: 0;
     transform: rotate(-90deg);
-    displayFont();
-    font-size: 20px;
-    letter-spacing: 1px;
+    displayFontBold();
+    font-size: 28px;
     line-height: $headerHeight;
     white-space nowrap;
-    color: $white;
+    color: $primary;
+    
+    +min-screen($media-small) {
+      display: block;
+    }
   }
 }

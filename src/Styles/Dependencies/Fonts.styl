@@ -4,6 +4,7 @@
 $helvetica= 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
 $work= 'Work Sans', $helvetica;
 $work-bold= 'Work Sans Bold', $helvetica;
+
 $palatino= 'Palatino', Garamond, 'Bookman', 'Avant Garde';
 $playfair= 'Playfair', $palatino;
 $playfair-bold= 'Playfair Bold', $palatino;
@@ -49,6 +50,7 @@ $playfair-bold= 'Playfair Bold', $palatino;
 $display-font= $playfair;
 $display-font--bold= $playfair-bold;
 $body-font= $work;
+$body-font--bold= $work-bold;
 
 ////////////////////////////
 //      Font Mixins       //
@@ -65,6 +67,12 @@ displayFont($color=$display-color) {
 
 bodyFont($color=$body-color) {
   font-family: $body-font;
+  font-weight: 400;
+  color: $color;
+}
+
+bodyFontBold($color=$body-color) {
+  font-family: $body-font--bold;
   font-weight: 400;
   color: $color;
 }
