@@ -1,7 +1,7 @@
 .l {
   display: flex;
   flex-direction: row-reverse;
-  
+
   +min-screen($media-small) {
     overflow: hidden;
   }
@@ -21,11 +21,11 @@
 .content {
   padding: rem(60 20 80);
   min-height: 100vh;
-  
+
   +min-screen($media-small) {
     padding: rem(60 40 120);
   }
-  
+
   +min-screen($media-medium) {
     padding: rem(60 60 120);
   }
@@ -41,15 +41,19 @@
   }
 
   +min-screen($media-large) {
-    flex-wrap: nowrap;
     .content__split__column {
       flex: 1 1 50%;
-      
+
       &:nth-of-type(odd) {
         padding-right: rem(60);
       }
+
       &:nth-of-type(even) {
         padding-left: rem(60);
+      }
+
+      &.content__split__column--full {
+        flex: 1 0 100%;
       }
     }
   }

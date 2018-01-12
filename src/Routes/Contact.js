@@ -3,7 +3,7 @@ import Introduction from '../Components/Introduction';
 import Footer from '../Components/Footer';
 import ContactCard from '../Components/ContactCard';
 
-export default class Landing extends React.Component {
+export default class Contact extends React.Component {
   render() {
     return (
       <main className='page'>

@@ -4,7 +4,7 @@ import Introduction from '../Components/Introduction';
 import Footer from '../Components/Footer';
 import { CARD_LINKS } from '../Services/Data';
 
-export default class Landing extends React.Component {
+export default class Concepts extends React.Component {
   renderCardLinks() {
     let links=[];
 
