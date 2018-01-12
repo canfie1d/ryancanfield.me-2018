@@ -53,3 +53,29 @@ body {
   margin-top: rem(60);
   margin-bottom: rem(20);
 }
+
+@keyframes aos {
+  0% {
+    opacity: .01;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.waypoint {
+  opacity: 0;
+
+  &.waypoint--inView {
+    animation: 500ms aos ease;
+    animation-fill-mode: forwards;
+
+    &:nth-of-type(even) {
+      animation: 500ms aos ease 300ms;
+      animation-fill-mode: forwards;
+    }
+  }
+}
