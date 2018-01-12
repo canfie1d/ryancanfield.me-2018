@@ -35,6 +35,13 @@
   margin-bottom: rem(20);
 }
 
+.h4 {
+  bodyFontBold();
+  font-size: rem(16);
+  line-height: 1.2;
+  margin-bottom: rem(20);
+}
+
 .p {
   bodyFont();
   font-size: rem(18);
@@ -57,5 +64,20 @@
   &:focus {
     outline: 1px solid $primary;
     outline-offset: 4px;
+  }
+
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.p,
+.a {
+  &::selection {
+    background: $secondary;
+  }
+  &::-moz-selection {
+    background: $secondary;
   }
 }
