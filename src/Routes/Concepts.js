@@ -11,15 +11,14 @@ export default class Landing extends React.Component {
     for (let i=0; i < CARD_LINKS.length; i++) {
 
       links.push(
-        <li key={i} className='card__item'>
-          <Card
-            title={CARD_LINKS[i].title}
-            description={CARD_LINKS[i].description}
-            imageUrl={CARD_LINKS[i].imageUrl}
-            url={CARD_LINKS[i].url}
-            length={CARD_LINKS[i].length}
-          />
-        </li>
+        <Card
+          key={i}
+          title={CARD_LINKS[i].title}
+          description={CARD_LINKS[i].description}
+          imageUrl={CARD_LINKS[i].imageUrl}
+          url={CARD_LINKS[i].url}
+          length={CARD_LINKS[i].length}
+        />
       );
     };
 
