@@ -9,12 +9,23 @@ $card-height--small= rem(200);
 
 .card__item {
   flex: 1 1 auto;
+  opacity: 0;
+
+  &.card__item--inView {
+    animation: 500ms aos ease;
+    animation-fill-mode: forwards;
+
+    &:nth-of-type(even) {
+      animation: 500ms aos ease 300ms;
+      animation-fill-mode: forwards;
+    }
+  }
 
   +min-screen($media-large) {
-    flex: 0 1 calc(50% - 40px);
+    flex: 0 1 calc(50% - 20px);
 
     &:nth-of-type(odd) {
-      margin-right: 20px;
+      padding-right: 20px;
     }
 
     &:nth-of-type(even) {

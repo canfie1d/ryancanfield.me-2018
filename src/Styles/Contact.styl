@@ -4,6 +4,12 @@
   border: 1px solid shade($white, 3%);
   padding: rem(60);
   background: $off-white;
+  opacity: 0;
+
+  &.contact-card--inView {
+    animation: 500ms aos ease;
+    animation-fill-mode: forwards;
+  }
 
   .h3 {
     max-width: rem(700);

@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './Components/Header';
 import { ScrollToTop } from './Services/ScrollToTop';
-
 import './App.styl';
 
 export default class App extends React.Component {
