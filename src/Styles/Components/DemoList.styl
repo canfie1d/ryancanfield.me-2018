@@ -1,0 +1,65 @@
+.demo__list {
+  @extend .card__list;
+
+  .demo__item {
+    @extend .card__item;
+
+    +min-screen($media-medium) {
+      flex: 0 1 50%;
+
+      &:nth-of-type(odd) {
+        padding-right: rem(20);
+      }
+
+      &:nth-of-type(even) {
+        padding-left: rem(20);
+      }
+    }
+  }
+
+  .demo__link {
+    @extend .card__link;
+    white-space: pre-wrap;
+
+    .demo__link__column {
+      position: relative;
+
+      &:last-of-type {
+        padding: rem(10);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      +min-screen($media-small) {
+        &:first-of-type {
+          flex: 1 1 100%;
+        }
+
+        &:last-of-type {
+          padding: rem(20);
+        }
+      }
+    }
+
+    .demo__image__wrapper {
+      .demo__image {
+        width: 100%;
+      }
+    }
+
+    .demo__heart-container {
+      align-self: flex-end;
+      display: flex;
+
+      .icon {
+        padding-right: rem(5);
+      }
+
+      .demo__heart__quantity {
+        bodyFont($secondary);
+        // font-size: rem(12);
+      }
+    }
+  }
+}

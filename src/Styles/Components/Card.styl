@@ -9,22 +9,25 @@ $card-height--small= rem(200);
 
 .card__item {
   flex: 1 1 auto;
+  padding-bottom: rem(40);
+
+  +max-screen($media-medium) {
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
 
   +min-screen($media-large) {
-    flex: 0 1 calc(50% - 20px);
+    flex: 0 1 50%;
 
     &:nth-of-type(odd) {
-      padding-right: 20px;
+      padding-right: rem(20);
     }
 
     &:nth-of-type(even) {
-      margin-left: 20px;
+      padding-left: rem(20);
     }
 
-  }
-
-  &:not(:last-of-type) {
-    padding-bottom: rem(40);
   }
 
 }
@@ -32,20 +35,19 @@ $card-height--small= rem(200);
 .card__link {
     display: flex;
     flex-wrap: wrap;
-    box-shadow: 2px 2px 4px rgba($black, .2);
-    border: 1px solid shade($white, 3%);
     background: $off-white;
     text-decoration: none;
     cursor: pointer;
     cursor: url(./Assets/Images/pointer.png) 2 2, pointer;
-    transition: transform 300ms ease-out,
-                box-shadow 300ms ease-out;
+    box-shadow: 2px 2px 4px rgba($black, .1);
+    transition: transform 200ms ease-out,
+                box-shadow 200ms ease-out;
 
     &:hover {
       transform: scale(1.01);
-      box-shadow: 4px 4px 6px rgba($black, .15);
+      box-shadow: 2px 2px 6px rgba($black, .1);
     }
-    
+
     &:focus {
       outline: 1px solid $primary;
     }
@@ -63,6 +65,14 @@ $card-height--small= rem(200);
     flex: 1 1 100%;
     height: $card-height--small;
     overflow: hidden;
+
+    &:last-of-type {
+      border: 1px solid;
+      border-top-color: tint($tertiary, 80%);
+      border-right-color: tint($tertiary, 30%);
+      border-bottom-color: tint($tertiary, 40%);
+      border-left-color: tint($tertiary, 50%);
+      }
 }
 
 .card__image {

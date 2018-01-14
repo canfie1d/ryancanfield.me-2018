@@ -50,38 +50,54 @@ export const CLIENTS = [
   }
 ];
 
-export const PROJECTS = [
+export const DEMOS = [
   {
-    title: 'Chat Bubbles',
-    id: 'GmMaVx'
+    title: 'Expanding Hamburger Button',
+    id: 'pvewaX',
+    image: 'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/codepens/expanding_hamburger.png',
+    hearts: '94'
   },
   {
-    title: 'Expanding Hamburger Navigation Icon',
-    id: 'pvewaX'
+    title: 'Genie Style Hidden Navigation',
+    id: 'YPxxoa',
+    image: 'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/codepens/genie_nav.png',
+    hearts: '49'
+  },
+  {
+    title: 'Flipping 3d Form Switcher',
+    id: 'ogYrZG',
+    image: 'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/codepens/3d_form.png',
+    hearts: '47'
   },
   {
     title: 'Bottom Card Navigation',
-    id: 'EagxGR'
+    id: 'EagxGR',
+    image: 'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/codepens/bottom_nav.png',
+    hearts: '37'
+  },
+  {
+    title: 'Single Element Reusable Tooltip',
+    id: 'dnhBF',
+    image: 'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/codepens/tooltip.png',
+    hearts: '39'
   },
   {
     title: 'Dropdown Mini Menu',
-    id: 'vymmZR'
+    id: 'vymmZR',
+    image: 'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/codepens/mini_menu.png',
+    hearts: '1'
   },
   {
-    title: 'Playing Card Flop Animation',
-    id: 'ulDvK'
+    title: 'Blur Modal',
+    id: 'zwWOwj',
+    image: 'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/codepens/blur_modal.png',
+    hearts: '0'
   },
   {
-    title: 'Sneaky Modal Effect',
-    id: 'zwWOwj'
-  },
-  {
-    title: 'Expanding Menu Effect',
-    id: 'xgGdra'
-  },
-  {
-    title: 'Knockout Text on Button',
-    id: 'rmbdgg'
+    title: 'Chat Bubbles',
+    id: 'GmMaVx',
+    image: 'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/codepens/chat_bubbles.png',
+    hearts: '0'
   }
 ];
 
