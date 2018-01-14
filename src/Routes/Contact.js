@@ -8,7 +8,9 @@ export default class Contact extends React.Component {
     return (
       <main className='page'>
         <Introduction title="Contact Me." subtitle="You can reach to out me in several ways." />
-        <div className='content'>
+        <div className='content' id='content'>
+          <div className='hr' />
+          <h3 className='h3'>I'd love to hear from you</h3>
           <ContactCard />
         </div>
         <Footer />

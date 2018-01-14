@@ -4,11 +4,11 @@ import Introduction from '../Components/Introduction';
 import Footer from '../Components/Footer';
 import { CARD_LINKS } from '../Services/Data';
 
-export default class Concepts extends React.Component {
+export default class Writing extends React.Component {
   renderCardLinks() {
-    let links=[];
+    let links = [];
 
-    for (let i=0; i < CARD_LINKS.length; i++) {
+    for (let i = 0; i < CARD_LINKS.length; i++) {
 
       links.push(
         <Card
@@ -24,12 +24,14 @@ export default class Concepts extends React.Component {
 
     return <ul className='card__list'>{links}</ul>;
   }
-  
+
   render() {
     return (
       <main className='page'>
         <Introduction title="My Writing." subtitle="Organized thoughts on front-end design &amp; development." />
-        <div className='content'>
+        <div className='content' id='content'>
+          <div className='hr' />
+          <h3 className='h3'>Selected Medium Articles</h3>
           {this.renderCardLinks()}
         </div>
         <Footer />

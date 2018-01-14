@@ -1,5 +1,5 @@
 import React from 'react';
-import Introduction from '../Components/Introduction';
+import Introduction from '../Containers/Introduction';
 import Footer from '../Components/Footer';
 import AnimatedWaypoint from '../Containers/AnimatedWaypoint';
 
@@ -8,7 +8,7 @@ export default class About extends React.Component {
     return (
       <main className='page'>
         <Introduction title="I'm Ryan Canfield," subtitle="a digital product designer&nbsp;&amp; developer in Seattle,&nbsp;Wa." />
-        <div className='content'>
+        <div className='content' id='content'>
           <div className='content__split'>
             <AnimatedWaypoint>
               <div className='content__split__column'>

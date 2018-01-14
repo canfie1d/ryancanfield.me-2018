@@ -14,21 +14,21 @@ export default class Nav extends React.Component {
             </NavLink>
           </li>
           <li className='nav__item'>
-            <NavLink className='nav__link' activeClassName="nav__link--active" to='/concepts' exact>
-              <Icon className='nav__link__icon' icon='concepts' color='white' size='large' />
-              <span className='visually-hidden'>Concepts</span>
+            <NavLink className='nav__link' activeClassName="nav__link--active" to='/writing' exact>
+              <Icon className='nav__link__icon' icon='writing' color='white' size='large' />
+              <span className='visually-hidden'>Writing</span>
             </NavLink>
           </li>
           <li className='nav__item'>
-            <NavLink className='nav__link' activeClassName="nav__link--active" to='/projects' exact>
-              <Icon className='nav__link__icon' icon='projects' color='white' size='large' />
+            <NavLink className='nav__link' activeClassName="nav__link--active" to='/work' exact>
+              <Icon className='nav__link__icon' icon='work' color='white' size='large' />
               <span className='visually-hidden'>Work</span>
             </NavLink>
           </li>
           <li className='nav__item'>
             <NavLink className='nav__link' activeClassName="nav__link--active" to='/contact' exact>
               <Icon className='nav__link__icon' icon='contact' color='white' size='large' />
-              <span className='visually-hidden'>Elsewhere</span>
+              <span className='visually-hidden'>Contact</span>
             </NavLink>
           </li>
         </ul>
