@@ -10,7 +10,7 @@ export default class App extends React.Component {
         <div className='l'>
           <ScrollToTop />
           <div className='l--rightColumn'>
-            <a className='visually-hidden' href="#scrollArea">Skip to content</a>
+            <a className='visually-hidden' href="#content">Skip to content</a>
             <Header />
           </div>
           <div className='l--leftColumn' id='scrollArea'>
