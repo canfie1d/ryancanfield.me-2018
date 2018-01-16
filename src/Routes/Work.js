@@ -55,35 +55,28 @@ export default class Work extends React.Component {
     }
 
     return (
-      <AnimatedWaypoint className='client__list__wrapper'>
-        <h3 className='h3 client__list__header'>Companies I've worked with</h3>
-        <ul className='client__list'>{clientList}</ul>
-      </AnimatedWaypoint>
+      <ul className='client__list'>{clientList}</ul>
     );
   }
 
   renderOpenSourceList() {
     return (
-      <AnimatedWaypoint>
-        <div className='hr' />
-        <h3 className='h3'>Open source projects</h3>
-        <ul className='open-source__list'>
-          <OpenSourceItem
-            title='Complete React Scripts'
-            githubUrl='http://www.github.com/canfie1d/complete-react-scripts'
-            npmUrl='https://www.npmjs.com/package/complete-react-scripts'
-          />
-          <OpenSourceItem
-            title='Shopify React Scripts'
-            githubUrl='http://www.github.com/canfie1d/shopify-react-scripts'
-            npmUrl='https://www.npmjs.com/package/shopify-react-scripts'
-          />
-          <OpenSourceItem
-            title='Slack Statusbot'
-            githubUrl='https://github.com/canfie1d/statusbot'
-          />
-        </ul>
-      </AnimatedWaypoint>
+      <ul className='open-source__list'>
+        <OpenSourceItem
+          title='Complete React Scripts'
+          githubUrl='http://www.github.com/canfie1d/complete-react-scripts'
+          npmUrl='https://www.npmjs.com/package/complete-react-scripts'
+        />
+        <OpenSourceItem
+          title='Shopify React Scripts'
+          githubUrl='http://www.github.com/canfie1d/shopify-react-scripts'
+          npmUrl='https://www.npmjs.com/package/shopify-react-scripts'
+        />
+        <OpenSourceItem
+          title='Slack Statusbot'
+          githubUrl='https://github.com/canfie1d/statusbot'
+        />
+      </ul>
     );
   }
 
@@ -95,8 +88,18 @@ export default class Work extends React.Component {
           <div className='hr' />
           <h3 className='h3'>Interface Demos</h3>
           {this.renderDemoList()}
-          {this.renderClientList()}
-          {this.renderOpenSourceList()}
+          <div className='content__split'>
+            <AnimatedWaypoint className='content__split__column'>
+              <div className='hr' />
+              <h3 className='h3 client__list__header'>Companies I've worked with</h3>
+              {this.renderClientList()}
+            </AnimatedWaypoint>
+            <AnimatedWaypoint className='content__split__column'>
+              <div className='hr' />
+              <h3 className='h3'>Open source projects</h3>
+              {this.renderOpenSourceList()}
+            </AnimatedWaypoint>
+          </div>
         </div>
         <Footer />
       </main>

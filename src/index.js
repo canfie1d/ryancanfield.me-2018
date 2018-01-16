@@ -5,8 +5,7 @@ import createStore from './Services/Store';
 import createHistory from 'history/createBrowserHistory';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
-import publicRoutes from './routes';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import axe from 'react-axe';
 import App from './App';
 
@@ -21,9 +20,7 @@ if (process.env.NODE_ENV !== 'production') {
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
-      <App>
-        {publicRoutes}
-      </App>
+      <Route path='/' component={App} />
     </Router>
   </Provider>,
   document.getElementById('root')
