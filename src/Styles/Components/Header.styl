@@ -2,13 +2,14 @@ $headerHeight= rem(80);
 
 header {
   position: relative;
-  width: 0;
+  width: 100%;
+  height: $headerHeight;
+  background: $primary-dark;
 
   +min-screen($media-small) {
-    background: $primary-dark;
+    padding: rem(20 10);
     width: $headerHeight;
     height: 100vh;
-    padding: rem(20 10);
   }
 
   .h1 {

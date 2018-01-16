@@ -6,13 +6,13 @@ html {
 body {
   cursor: default;
   cursor: url(./Assets/Images/cursor.png) 2 2, default;
+  background: $primary-dark;
 }
 
 html,
 body {
   width: 100%;
   min-height: 100%;
-  overflow-x: hidden;
 }
 
 * {
@@ -28,13 +28,9 @@ body {
   }
 }
 
-.app {
-  height: 100vh;
-}
-
 .page {
   position: relative;
-  height: 100vh;
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 
