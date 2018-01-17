@@ -42,7 +42,10 @@ export default class AnimatedWaypoint extends React.Component {
 
   render() {
     return (
-      <Waypoint onEnter={this.handleWaypointEnter}>
+      <Waypoint
+        scrollableAncestor={document.getElementById('content')}
+        onEnter={this.handleWaypointEnter}
+      >
         {this.renderElement()}
       </Waypoint>
     );
