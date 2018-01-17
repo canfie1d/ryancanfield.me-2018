@@ -8,14 +8,18 @@ export default class AnimatedWaypoint extends React.Component {
     this.state = {
       inView: false
     };
-
-    this.handleWaypointEnter = this.handleWaypointEnter.bind(this);
   }
 
-  handleWaypointEnter() {
+  handleWaypointEnter(currentPosition) {
     this.setState({
-      inView: true
+      inView: false
     });
+
+    if (currentPosition === 'inside') {
+      this.setState({
+        inView: true
+      });
+    }
   }
 
   renderElement() {
@@ -43,8 +47,12 @@ export default class AnimatedWaypoint extends React.Component {
   render() {
     return (
       <Waypoint
-        scrollableAncestor={document.getElementById('content')}
-        onEnter={this.handleWaypointEnter}
+        scrollableAncestor={window}
+        onEnter={
+          ({ currentPosition }) => {
+            this.handleWaypointEnter.bind(this, currentPosition)()
+          }
+        }
       >
         {this.renderElement()}
       </Waypoint>
