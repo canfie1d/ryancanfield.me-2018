@@ -1,12 +1,12 @@
 import React from 'react';
-import Introduction from '../Containers/Introduction';
+import Introduction from '../Components/Introduction';
 import Footer from '../Components/Footer';
 import AnimatedWaypoint from '../Containers/AnimatedWaypoint';
 
 export default class About extends React.Component {
   render() {
     return (
-      <main className='page'>
+      <main className='page fade'>
         <Introduction title="I'm Ryan Canfield," subtitle="a digital product designer&nbsp;&amp; developer in Seattle,&nbsp;Wa." />
         <div className='content' id='content'>
           <div className='content__split'>

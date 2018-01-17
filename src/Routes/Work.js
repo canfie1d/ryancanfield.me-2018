@@ -82,7 +82,7 @@ export default class Work extends React.Component {
 
   render() {
     return (
-      <main className='page'>
+      <main className='page fade'>
         <Introduction title="My Work." subtitle="A selection of projects, demos &amp;&nbsp;clients." />
         <div className='content' id='content'>
           <div className='hr' />

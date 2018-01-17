@@ -6,6 +6,7 @@
     "complete-react-scripts": "1.1.17",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-transition-group": "^2.2.1",
     "react-waypoint": "^8.0.0"
   },
   "scripts": {

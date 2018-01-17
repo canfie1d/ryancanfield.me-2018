@@ -29,7 +29,10 @@ body {
 }
 
 .page {
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
   overflow-x: hidden;
   box-sizing: border-box;
 }
@@ -79,5 +82,26 @@ body {
       animation: 500ms aos ease 300ms;
       animation-fill-mode: forwards;
     }
+  }
+}
+
+.fade {
+
+  &.fade-enter {
+    opacity: 0;
+  }
+
+  &.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in 500ms;
+  }
+
+  &.fade-exit {
+    opacity: 1;
+  }
+
+  &.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
   }
 }

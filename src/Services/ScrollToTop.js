@@ -6,7 +6,9 @@ export var ScrollToTop = withRouter(
   class ScrollToTopWithoutRouter extends React.Component {
     componentDidUpdate(prevProps) {
       if (this.props.location !== prevProps.location) {
-        document.getElementById('scrollArea').scrollTo(0, 0);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+        }, 500);
       }
     }
 

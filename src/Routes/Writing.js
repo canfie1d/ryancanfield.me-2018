@@ -27,7 +27,7 @@ export default class Writing extends React.Component {
 
   render() {
     return (
-      <main className='page'>
+      <main className='page fade'>
         <Introduction title="My Writing." subtitle="Organized thoughts on front-end design &amp; development." />
         <div className='content' id='content'>
           <div className='hr' />

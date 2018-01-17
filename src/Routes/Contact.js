@@ -6,7 +6,7 @@ import ContactCard from '../Components/ContactCard';
 export default class Contact extends React.Component {
   render() {
     return (
-      <main className='page'>
+      <main className='page fade'>
         <Introduction title="Contact Me." subtitle="You can reach to out me in several ways." />
         <div className='content' id='content'>
           <div className='hr' />
