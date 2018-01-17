@@ -1,5 +1,5 @@
 import React from 'react';
-import Introduction from '../Components/Introduction';
+import Introduction from '../Containers/Introduction';
 
 export default class NotFound extends React.Component {
   render() {

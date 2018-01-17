@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '../Components/Card';
-import Introduction from '../Components/Introduction';
+import Introduction from '../Containers/Introduction';
 import Footer from '../Components/Footer';
 import { CARD_LINKS } from '../Services/Data';
 

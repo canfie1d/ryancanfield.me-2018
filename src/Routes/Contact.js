@@ -1,5 +1,5 @@
 import React from 'react';
-import Introduction from '../Components/Introduction';
+import Introduction from '../Containers/Introduction';
 import Footer from '../Components/Footer';
 import ContactCard from '../Components/ContactCard';
 
