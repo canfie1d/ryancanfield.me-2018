@@ -12,13 +12,15 @@
     .nav__item {
       flex: 0 0 auto;
       display: inline;
+
       &:not(:last-of-type) {
         margin-right: rem(10);
       }
     }
   }
-  
+
   .nav__link {
+    position: relative;
     text-decoration: none;
     display: inline-block;
     padding: rem(15);
@@ -29,7 +31,7 @@
 
     &.nav__link--active {
       border: 1px solid $off-white;
-      
+
       &:hover,
       &:focus {
         border-color: shade($off-white, 50%);
@@ -37,14 +39,30 @@
 
     }
 
+    .nav__link__title {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: -1;
+      transform: translate(0, -50%);
+      bodyFontBold();
+    }
+
     &:hover,
     &:focus {
       outline: 1px solid $off-white;
       outline-offset: 2px;
+
     }
-      
+
+    &:hover {
+      .nav__link__title {
+        transition: transform 200ms ease-out;
+        transform: translate(-100% - 30px, -50%);
+      }
+    }
   }
-  
+
   +min-screen($media-small) {
     .nav__item:not(:last-of-type) {
       margin-left: 0;
