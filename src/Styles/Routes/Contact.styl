@@ -10,6 +10,7 @@
   background: $off-white;
 
   .h3 {
+    displayFont();
     max-width: rem(700);
     margin: 0 auto rem(60);
   }
@@ -38,11 +39,11 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        font-family: $work-bold;
+        bodyFontBold();
         background: $secondary;
         text-decoration: none;
         box-shadow: 2px 2px 4px rgba($black, .2);
-        padding: rem(20 40);
+        padding: rem(20 20);
         text-transform: uppercase;
         color: $white;
         transition: box-shadow 200ms ease-out,
@@ -52,6 +53,10 @@
           outline: none;
           box-shadow: 2px 2px 6px rgba($black, .2);
           background: shade($secondary, 10%);
+        }
+
+        +min-screen($media-small) {
+          padding: rem(20 40);
         }
       }
 

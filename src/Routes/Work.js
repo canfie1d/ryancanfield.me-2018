@@ -13,13 +13,8 @@ export default class Work extends React.Component {
 
     for (let i = 0; i < DEMOS.length; i++) {
       demoList.push(
-        <AnimatedWaypoint element='li' className='demo__item' key={DEMOS[i].title}>
+        <AnimatedWaypoint element='li' className='card__item' key={DEMOS[i].title}>
           <a className='a demo__link' href={`http://www.codepen.io/canfie1d/full/${DEMOS[i].id}`}>
-            <div className='demo__link__column'>
-              <div className='demo__image__wrapper'>
-                <img className='demo__image' src={DEMOS[i].image} alt='' />
-              </div>
-            </div>
             <div className='demo__link__column'>
               <h3 className='h3 demo__title'>{DEMOS[i].title}</h3>
               <div className='demo__heart-container'>
@@ -27,12 +22,17 @@ export default class Work extends React.Component {
                 <span className='demo__heart__quantity'>{DEMOS[i].hearts}</span>
               </div>
             </div>
+            <div className='demo__link__column'>
+              <div className='demo__image__wrapper'>
+                <img className='demo__image' src={DEMOS[i].image} alt='' />
+              </div>
+            </div>
           </a>
         </AnimatedWaypoint>
       );
     }
 
-    return <ul className='demo__list'>{demoList}</ul>;
+    return <ul className='card__list'>{demoList}</ul>;
   }
 
   renderClientList() {
