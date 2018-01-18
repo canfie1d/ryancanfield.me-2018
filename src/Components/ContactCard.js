@@ -6,7 +6,7 @@ export default class ContactCard extends React.Component {
   render() {
     return (
       <AnimatedWaypoint className='contact-card'>
-        <h3 className='h3'>Would you like to work together? Good news! I am currently seeking a full time engagement.</h3>
+        <h3 className='h3'>Would you like to work together?<br />Good news! I am currently seeking a full time engagement.</h3>
         <ul className='contact-card__list'>
           <li className='contact-card__item contact-card__item__email'>
             <a className='button' href="mailto:ryancanfield@me.com?subject=Hello from ryancanfield.me" >
