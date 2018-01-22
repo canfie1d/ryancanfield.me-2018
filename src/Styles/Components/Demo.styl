@@ -1,0 +1,58 @@
+@keyframes fade {
+  0% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba($black, .9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  opacity: 0;
+  animation: fade 300ms ease-in;
+  animation-fill-mode: forwards;
+
+  .modal {
+    opacity: 0;
+    position: relative;
+    background: $off-white;
+    width: 90%;
+    max-width: 400px;
+    animation: aos 300ms ease-out 200ms;
+    animation-fill-mode: forwards;
+  }
+
+  .modal__button {
+    position: absolute;
+    top: rem(-60);
+    right: rem(-40);
+    background: none;
+    color: $off-white;
+    border: none;
+    font-size: rem(54);
+  }
+}
+
+.demo-iframe {
+  width: 100%;
+  height: 300px;
+}
+
+.demo-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bodyFontBold($teritary);
+  z-index: -1;
+}

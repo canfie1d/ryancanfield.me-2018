@@ -4,9 +4,52 @@ import Footer from '../Components/Footer';
 import OpenSourceItem from '../Components/OpenSourceItem';
 import AnimatedWaypoint from '../Containers/AnimatedWaypoint';
 import Icon from '../Components/Icon';
+import Demo from '../Components/Demo';
 import { CLIENTS, DEMOS } from '../Services/Data';
 
 export default class Work extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.closeDemoModal = this.closeDemoModal.bind(this);
+
+    this.state = {
+      demoModal: {
+        open: false,
+        id: '',
+        title: ''
+      }
+    }
+  }
+
+  openDemoModal(id, title) {
+    document.body.style.overflow = 'hidden';
+    this.setState({
+      demoModal: {
+        open: !this.state.demoModal.open,
+        id: id,
+        title: title
+      }
+    });
+  }
+
+  closeDemoModal() {
+    document.body.style.overflow = 'visible';
+
+    this.setState({
+      demoModal: {
+        open: false,
+        id: '',
+        title: ''
+      }
+    });
+  }
+
+  renderDemoModal() {
+    if (this.state.demoModal.open) {
+      return <Demo closeDemoModal={this.closeDemoModal} demoModal={this.state.demoModal} />;
+    }
+  }
 
   renderDemoList() {
     const demoList = [];
@@ -14,7 +57,8 @@ export default class Work extends React.Component {
     for (let i = 0; i < DEMOS.length; i++) {
       demoList.push(
         <AnimatedWaypoint element='li' className='card__item' key={DEMOS[i].title}>
-          <a className='a demo__link' href={`http://www.codepen.io/canfie1d/full/${DEMOS[i].id}`}>
+          <div className='demo__link' onClick={this.openDemoModal.bind(this, DEMOS[i].id, DEMOS[i].title)}>
+            {/*<a className='a demo__link' href={`http://www.codepen.io/canfie1d/full/${DEMOS[i].id}`}>*/}
             <div className='demo__link__column'>
               <h3 className='h3 demo__title'>{DEMOS[i].title}</h3>
               <div className='demo__heart-container'>
@@ -27,7 +71,8 @@ export default class Work extends React.Component {
                 <img className='demo__image' src={DEMOS[i].image} alt='' />
               </div>
             </div>
-          </a>
+          </div>
+          {/*</a>*/}
         </AnimatedWaypoint>
       );
     }
@@ -83,6 +128,7 @@ export default class Work extends React.Component {
   render() {
     return (
       <main className='page fade'>
+        {this.renderDemoModal()}
         <Introduction title="My Work." subtitle="A selection of projects, demos &amp;&nbsp;clients." />
         <div className='content' id='content'>
           <div className='hr' />
