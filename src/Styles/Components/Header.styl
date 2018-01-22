@@ -5,8 +5,10 @@ header {
   width: 100%;
   height: $headerHeight;
   background: $primary-dark;
+  border-top: 1px solid $primary;
 
   +min-screen($media-small) {
+    border-top: none;
     padding: rem(20 10);
     width: $headerHeight;
     height: 100vh;

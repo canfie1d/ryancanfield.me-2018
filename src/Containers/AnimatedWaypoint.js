@@ -10,6 +10,12 @@ export default class AnimatedWaypoint extends React.Component {
     };
   }
 
+  componentWillUnmount() {
+    this.setState({
+      inView: false
+    });
+  }
+
   handleWaypointEnter(currentPosition) {
     this.setState({
       inView: false
