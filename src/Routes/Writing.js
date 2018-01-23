@@ -1,28 +1,28 @@
 import React from 'react';
-import Card from '../Components/Card';
+import CardList from '../Components/CardList';
 import Introduction from '../Components/Introduction';
 import Footer from '../Components/Footer';
-import { CARD_LINKS } from '../Services/Data';
+import ArticleLink from '../Components/ArticleLink';
+import { ARTICLE_LINKS } from '../Services/Data';
 
 export default class Writing extends React.Component {
-  renderCardLinks() {
+  getCardLinks() {
     let links = [];
 
-    for (let i = 0; i < CARD_LINKS.length; i++) {
-
+    for (let i = 0; i < ARTICLE_LINKS.length; i++) {
       links.push(
-        <Card
+        <ArticleLink
           key={i}
-          title={CARD_LINKS[i].title}
-          description={CARD_LINKS[i].description}
-          imageUrl={CARD_LINKS[i].imageUrl}
-          url={CARD_LINKS[i].url}
-          length={CARD_LINKS[i].length}
+          url={ARTICLE_LINKS[i].url}
+          imageUrl={ARTICLE_LINKS[i].imageUrl}
+          title={ARTICLE_LINKS[i].title}
+          description={ARTICLE_LINKS[i].description}
+          length={ARTICLE_LINKS[i].length}
         />
       );
     };
 
-    return <ul className='card__list'>{links}</ul>;
+    return links;
   }
 
   render() {
@@ -32,7 +32,7 @@ export default class Writing extends React.Component {
         <div className='content' id='content'>
           <div className='hr' />
           <h3 className='h3'>Selected Medium Articles</h3>
-          {this.renderCardLinks()}
+          <CardList cards={this.getCardLinks()} />
         </div>
         <Footer />
       </main>

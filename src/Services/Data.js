@@ -101,7 +101,7 @@ export const DEMOS = [
   }
 ];
 
-export const CARD_LINKS = [
+export const ARTICLE_LINKS = [
   {
     title: 'Shopify React Scripts',
     description: 'Bespoke Shopify/React Projects in Minutes',
@@ -158,4 +158,44 @@ export const CARD_LINKS = [
     url: 'https://medium.com/@Canfie1d/smacss-bem-edge-case-naming-convention-73be902b1d30',
     length: '3 min read'
   },
+];
+
+export const OPEN_SOURCE = [
+  {
+    title: 'Complete React Scripts',
+    githubUrl: 'http://www.github.com/canfie1d/complete-react-scripts',
+    npmUrl: 'https://www.npmjs.com/package/complete-react-scripts'
+  },
+  {
+    title: 'Shopify React Scripts',
+    githubUrl: 'http://www.github.com/canfie1d/shopify-react-scripts',
+    npmUrl: 'https://www.npmjs.com/package/shopify-react-scripts'
+  },
+  {
+    title: 'Slack Statusbot',
+    githubUrl: 'https://github.com/canfie1d/statusbot'
+  }
+];
+
+export const CONTACT_POINTS = [
+  {
+    url: 'mailto:ryancanfield@me.com?subject=Hello from ryancanfield.me',
+    title: 'Contact Me',
+    type: 'button'
+  },
+  {
+    url: 'http://www.twitter.com/canfie1d',
+    title: 'Twitter',
+    icon: 'twitter'
+  },
+  {
+    url: 'http://www.github.com/canfie1d',
+    title: 'Github',
+    icon: 'github'
+  },
+  {
+    url: 'http://www.linkedin.com/in/ryanmcanfield',
+    title: 'LinkedIn',
+    icon: 'linkedin'
+  }
 ];

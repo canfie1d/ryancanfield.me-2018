@@ -3,28 +3,24 @@ import AnimatedWaypoint from '../Containers/AnimatedWaypoint';
 
 export default class Card extends React.Component {
   render() {
+    const classes = [
+      'card__item',
+      this.props.className ? this.props.className : null
+    ].join(' ').trim();
+
+    if (this.props.inList) {
+      return (
+        <AnimatedWaypoint element={this.props.element || 'li'} className={classes}>
+          {this.props.children}
+        </AnimatedWaypoint>
+      );
+    }
+
     return (
-      <AnimatedWaypoint element='li' className='card__item'>
-        <a href={this.props.url} className='card__link'>
-          <div className='card__row'>
-            <div className='card__column'>
-              <img src={this.props.imageUrl} className='card__image' alt='presentational card' role="presentation" />
-            </div>
-            <div className='card__column'>
-              <span className='card__title'>
-                {this.props.title}
-              </span>
-              <div className='card__description-wrapper'>
-                <p className='card__description'>
-                  {this.props.description}
-                </p>
-              </div>
-              <span className='card__length'>
-                {this.props.length}
-              </span>
-            </div>
-          </div>
-        </a>
+      <AnimatedWaypoint element={this.props.element || 'div'}>
+        <div className={classes}>
+          {this.props.children}
+        </div>
       </AnimatedWaypoint>
     );
   }
