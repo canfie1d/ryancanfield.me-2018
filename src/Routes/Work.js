@@ -10,45 +10,45 @@ import { CLIENTS, DEMOS, OPEN_SOURCE } from '../Services/Data';
 import AnimatedWaypoint from '../Containers/AnimatedWaypoint';
 
 export default class Work extends React.Component {
-  renderProjectList() {
-    const PROJECTS = [
-      {
-        title: "",
-        url: "",
-        description: "",
-        image: ""
-      },
-      {
-        title: "",
-        url: "",
-        description: "",
-        image: ""
-      }
-    ];
+  // renderProjectList() {
+  //   const PROJECTS = [
+  //     {
+  //       title: "",
+  //       url: "",
+  //       description: "",
+  //       image: ""
+  //     },
+  //     {
+  //       title: "",
+  //       url: "",
+  //       description: "",
+  //       image: ""
+  //     }
+  //   ];
 
-    const projectList = [];
+  //   const projectList = [];
 
-    for (let i = 0; i < PROJECTS.length; i++) {
-      projectList.push(
-        <Card key={i}>
-          <div className='project'>
-            <div className='project__column'>
-              <h3 className='h3 project__title'>{PROJECTS[i].title}</h3>
-              <p className='p'>{PROJECTS[i].description}</p>
-              <a className='button'>Visit Site</a>
-            </div>
-            <div className='project__column'>
-              <div className='project__image__wrapper'>
-                <img className='project__image' src={PROJECTS[i].image} alt='' />
-              </div>
-            </div>
-          </div>
-        </Card>
-      );
-    }
+  //   for (let i = 0; i < PROJECTS.length; i++) {
+  //     projectList.push(
+  //       <Card key={i}>
+  //         <div className='project'>
+  //           <div className='project__column'>
+  //             <h3 className='h3 project__title'>{PROJECTS[i].title}</h3>
+  //             <p className='p'>{PROJECTS[i].description}</p>
+  //             <a className='button'>Visit Site</a>
+  //           </div>
+  //           <div className='project__column'>
+  //             <div className='project__image__wrapper'>
+  //               <img className='project__image' src={PROJECTS[i].image} alt='' />
+  //             </div>
+  //           </div>
+  //         </div>
+  //       </Card>
+  //     );
+  //   }
 
-    return projectList;
-  }
+  //   return projectList;
+  // }
 
   getDemoList() {
     const demoList = [];
@@ -77,9 +77,9 @@ export default class Work extends React.Component {
           <div className='hr' />
           <h3 className='h3'>Interface Demos</h3>
           <CardList cards={this.getDemoList()} />
-          <div className='hr' />
+          {/*<div className='hr' />
           <h3 className='h3'>Selected Projects</h3>
-          {this.renderProjectList()}
+          {this.renderProjectList()}*/}
           <div className='content__split'>
             <AnimatedWaypoint className='content__split__column'>
               <div className='hr' />
