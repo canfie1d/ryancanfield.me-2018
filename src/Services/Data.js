@@ -7,6 +7,9 @@ export const CLIENTS = [
     title: 'eBay Enterprise'
   },
   {
+    title: 'Shopify'
+  },
+  {
     title: 'Blue Cross Blue Shield'
   },
   {

@@ -10,6 +10,10 @@
     padding-bottom: rem(20);
     flex: 1 0 100%;
 
+    +screen($media-small $media-large) {
+      flex: 1 1 50%;
+    }
+
     &:not(:last-of-type) {
       border-bottom: 2px solid $tertiary;
     }
