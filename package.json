@@ -1,7 +1,6 @@
 {
   "name": "ryancanfield.me-2018",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "complete-react-scripts": "1.1.17",
     "react": "^16.2.0",
@@ -12,23 +11,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "nyc ./node_modules/.bin/ava -v",
-    "eject": "react-scripts eject",
-    "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
-    "standard": "standard index.js"
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "redux-responsive": "^4.3.5",
-    "ava": "^0.16.0",
-    "co-exec": "^1.0",
-    "codecov": "^1.0.1",
-    "ghooks": "^1.2.4",
-    "nyc": "^10.0.0",
-    "standard": "^8.4.0"
-  },
-  "config": {
-    "ghooks": {
-      "pre-commit": "npm run standard"
-    }
+    "redux-responsive": "^4.3.5"
   }
 }

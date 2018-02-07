@@ -1,8 +1,19 @@
+sudo: false
+language: node_js
+node_js:
+  - stable
+cache:
+  directories:
+  - node_modules
+script:
+  - npm run test
+  - npm run build
 deploy:
-  language: node_js
   provider: s3
   access_key_id: REACT_APP_SECRET_ACCESS_ID
   secret_access_key: REACT_APP_SECRET_ACCESS_KEY
-  bucket: "ryancanfield.me"
+  bucket: ryancanfield.me
   skip_cleanup: true
   local_dir: build
+  on:
+    branch: master
