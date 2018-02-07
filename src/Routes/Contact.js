@@ -13,7 +13,7 @@ export default class Contact extends React.Component {
     for (let i = 0; i < CONTACT_POINTS.length; i++) {
       if (CONTACT_POINTS[i].type === 'button') {
         contactPoints.push(
-          <li className='contact-card__item contact-card__item__email'>
+          <li key={i} className='contact-card__item contact-card__item__email'>
             <a className='button' href={CONTACT_POINTS[i].url} >
               {CONTACT_POINTS[i].title}
             </a>
@@ -21,7 +21,7 @@ export default class Contact extends React.Component {
         );
       } else {
         contactPoints.push(
-          <li className='contact-card__item'>
+          <li key={i} className='contact-card__item'>
             <a className='a' href={CONTACT_POINTS[i].url}>
               <Icon color='primary' size='x-large' icon={CONTACT_POINTS[i].icon} />
               <span className='visually-hidden'>{CONTACT_POINTS[i].title}</span>
