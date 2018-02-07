@@ -175,6 +175,11 @@ export const OPEN_SOURCE = [
     npmUrl: 'https://www.npmjs.com/package/shopify-react-scripts'
   },
   {
+    title: 'Transition Switch',
+    githubUrl: 'http://www.github.com/canfie1d/transition-switch',
+    npmUrl: 'https://www.npmjs.com/package/transition-switch'
+  },
+  {
     title: 'Slack Statusbot',
     githubUrl: 'https://github.com/canfie1d/statusbot'
   }
