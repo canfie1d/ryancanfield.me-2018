@@ -1,17 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default class Icon extends React.Component {
-  static defaultProps = {
-    size : null,
-    rotate : null,
-    color : null,
-    class : null
+export default class Icon extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      icon: ''
+    }
+  }
+
+  componentWillMount() {
+    import(`./Icons/${this.props.icon}`)
+      .then(module => {
+        let IconComponent = module.default();
+        this.setState({ icon: IconComponent });
+      });
   }
 
   render() {
-    const IconComponent = require(`./Icons/${this.props.icon}`).default;
-
     const sizeClass = this.props.size ?
       `icon--${this.props.size}` : null;
 
@@ -31,7 +37,7 @@ export default class Icon extends React.Component {
 
     return (
       <span className={classes}>
-        <IconComponent />
+        {this.state.icon}
       </span>
     );
   }
@@ -67,3 +73,10 @@ Icon.propTypes = {
   ]),
   className: PropTypes.string,
 };
+
+Icon.defaultProps = {
+  size: null,
+  rotate: null,
+  color: null,
+  class: null
+}
