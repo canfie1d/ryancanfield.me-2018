@@ -1,8 +1,6 @@
 import React from 'react';
 
 export default function Contact() {
-
-  /* eslint-disable max-len */
   return (
     <svg viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
       <g fillRule="nonzero" fill="none">
@@ -13,5 +11,4 @@ export default function Contact() {
       </g>
     </svg>
   );
-  /* eslint-enable */
 }

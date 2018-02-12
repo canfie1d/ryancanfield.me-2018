@@ -1,9 +1,6 @@
 import React from 'react';
 
 export default function Work() {
-
-
-  /* eslint-disable max-len */
   return (
     <svg viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
       <g fillRule="nonzero" fill="none">
@@ -16,5 +13,4 @@ export default function Work() {
       </g>
     </svg>
   );
-  /* eslint-enable */
 }
