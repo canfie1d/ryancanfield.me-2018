@@ -39,6 +39,7 @@ export default class About extends React.Component {
                 <p className='p'>In 2009, I earned an Associates in Information Technology as a member of the National Honor Society. In May 2012, I earned a Bachelor of Fine Art in Graphic Design with Honors/Cum Laude &amp; as the Salutatorian.</p>
                 <p className='p'>Shortly thereafter, I began my career as a designer for the <a className='a' href='http://www.azstatefair.com'>Arizona State Fair</a> in Phoenix, AZ before focusing my career on web design and development. By October 2012, I was offered a position as a UI engineer at <a href='http://www.synapsestudios.com' className='a'>Synapse Studios</a>. A position I held until my move to Seattle, WA in 2016.</p>
                 <p className='p'>Following the move to Seattle, I began a new position at <a className='a' href='http://helpfulhuman.com'>Helpful Human</a> where I specialized in user interface design &amp; front-end development.</p>
+                <p className='p'>Currently, I am a software engineer at <a className='a' href='https://xinova.com'>Xinova</a>.</p>
               </div>
             </AnimatedWaypoint>
           </div>
